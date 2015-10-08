@@ -1,0 +1,6 @@
+<div ng-switch="datepickerMode" role="application" ng-keydown="keydown($event)">
+  <h2>My custom datepicker template</h2>
+  <daypicker template-url="/app/template/day.html" ng-switch-when="day" tabindex="0"></daypicker>
+  <monthpicker template-url="/app/template/month.html" ng-switch-when="month" tabindex="0"></monthpicker>
+  <yearpicker template-url="/app/template/year.html" ng-switch-when="year" tabindex="0"></yearpicker>
+</div>

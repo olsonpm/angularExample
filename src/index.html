@@ -7,6 +7,8 @@
     <link rel="stylesheet" type="text/css" href="/index.css" media="screen" />
   </head>
   <body ng-app="myApp" ng-controller="myController">
+    <h2>Default datepicker template</h2>
     <datepicker ng-model="aDate" show-weeks="true"></datepicker>
+    <datepicker template-url="/app/template/datepicker.html" ng-model="aDate" show-weeks="true"></datepicker>
   </body>
 </html>
