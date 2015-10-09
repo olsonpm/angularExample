@@ -63,7 +63,7 @@ gulp.task('build-scss', function() {
 });
 
 gulp.task('build-fonts', function() {
-    return vFs.src(['./src/assets/fonts/*', './src/assets/fonts/@(bootstrap)/*'])
+    return vFs.src(['./src/assets/fonts/**/*.*', './src/assets/fonts/@(bootstrap)/**/*.*'])
         .pipe(vFs.dest('./dist/fonts'))
         .pipe(gulpLivereload({ start: true }));
 });
@@ -77,9 +77,9 @@ gulp.task('watch-js', function() {
 });
 
 gulp.task('watch-scss', function() {
-  gulp.watch('./src/scss/**/*.scss', ['build-scss']);
+  gulp.watch('./src/assets/scss/**/*.scss', ['build-scss']);
 });
 
 gulp.task('watch-fonts', function() {
-  gulp.watch('./src/fonts/*', ['build-fonts']);
+  gulp.watch('./src/assets/fonts/**/*.*', ['build-fonts']);
 });
